@@ -15,9 +15,9 @@ class HomeVehicleServiceWiget extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text(
+          Text(
             'Vehicle Services',
-            style: TextStyle(color: Color(0XFF0F3F54)),
+            style: TextStyle(color: kColorMainText, fontSize: 16.sp),
           ),
           kHeight15,
           Column(

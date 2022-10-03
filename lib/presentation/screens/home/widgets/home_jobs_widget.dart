@@ -3,15 +3,15 @@ import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:seclob/core/constants/colors.dart';
 import 'package:seclob/presentation/widgets/horizontal_listview_widget.dart';
 
-class HomeMaintananceWidget extends StatelessWidget {
-  const HomeMaintananceWidget({
+class HomeJobsWidget extends StatelessWidget {
+  const HomeJobsWidget({
     Key? key,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return HorizontalListviewWidget(
-      title: 'Home Maintanance',
+      title: 'Jobs',
       item: ClipRRect(
         borderRadius: BorderRadius.circular(10),
         child: Stack(
