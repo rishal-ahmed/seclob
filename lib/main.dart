@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:seclob/core/constants/colors.dart';
-import 'package:seclob/presentation/screens/main/screen_main.dart';
+import 'package:seclob/core/routes/route_generator.dart';
+import 'package:seclob/core/routes/routes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +20,8 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           title: 'Seclob',
           theme: ThemeData(primaryColor: kColorMain),
-          home: const ScreenMain(),
+          onGenerateRoute: RouteGenerator.generateRoute,
+          initialRoute: routeRoot,
         );
       },
     );

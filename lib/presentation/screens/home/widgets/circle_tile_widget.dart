@@ -8,28 +8,33 @@ class CircleTileWidget extends StatelessWidget {
     Key? key,
     required this.image,
     required this.title,
+    this.onTap,
   }) : super(key: key);
 
   final String image;
   final String title;
+  final Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
     return Expanded(
-      child: Column(
-        children: [
-          CircleAvatar(
-            backgroundImage: AssetImage(image),
-            radius: 25,
-          ),
-          kHeight5,
-          FittedBox(
-            child: Text(
-              title,
-              style: TextStyle(color: kWhite, fontSize: 14.sp),
+      child: InkWell(
+        onTap: onTap,
+        child: Column(
+          children: [
+            CircleAvatar(
+              backgroundImage: AssetImage(image),
+              radius: 25,
             ),
-          ),
-        ],
+            kHeight5,
+            FittedBox(
+              child: Text(
+                title,
+                style: TextStyle(color: kWhite, fontSize: 14.sp),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

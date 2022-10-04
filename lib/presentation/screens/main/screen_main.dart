@@ -18,12 +18,13 @@ class ScreenMain extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const AppBarWidget(),
+      appBar: const AppBarWidget(isHome: true),
       endDrawer: const HomeDrawerWidget(),
       body: SafeArea(
         child: ValueListenableBuilder(
-            valueListenable: bottomNavChangeNotifier,
-            builder: (context, int index, child) => _pages[index]),
+          valueListenable: bottomNavChangeNotifier,
+          builder: (context, int index, child) => _pages[index],
+        ),
       ),
       bottomNavigationBar: const BottomNavigationWidget(),
     );

@@ -4,6 +4,7 @@ import 'package:seclob/core/constants/colors.dart';
 import 'package:seclob/core/constants/images.dart';
 import 'package:seclob/core/constants/paddings.dart';
 import 'package:seclob/core/constants/sizes.dart';
+import 'package:seclob/core/routes/routes.dart';
 import 'package:seclob/presentation/screens/home/widgets/circle_tile_widget.dart';
 
 class HomeCategoryWidget extends StatelessWidget {
@@ -42,12 +43,17 @@ class HomeCategoryWidget extends StatelessWidget {
                 kHeight10,
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: const [
-                    CircleTileWidget(image: kIconNews, title: 'News'),
-                    CircleTileWidget(
+                  children: [
+                    const CircleTileWidget(image: kIconNews, title: 'News'),
+                    const CircleTileWidget(
                         image: kIconVehicleService, title: 'Vehicle Service'),
-                    CircleTileWidget(image: kIconEats, title: 'Eats'),
-                    CircleTileWidget(image: kIconMore, title: 'More'),
+                    const CircleTileWidget(image: kIconEats, title: 'Eats'),
+                    CircleTileWidget(
+                      image: kIconMore,
+                      title: 'More',
+                      onTap: () =>
+                          Navigator.pushNamed(context, routeAllServices),
+                    ),
                   ],
                 ),
               ],

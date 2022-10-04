@@ -7,7 +7,15 @@ import 'package:seclob/core/constants/sizes.dart';
 class AppBarWidget extends StatelessWidget with PreferredSizeWidget {
   const AppBarWidget({
     Key? key,
+    this.isHome = false,
+    this.leading,
+    this.title,
+    this.actions = const [],
   }) : super(key: key);
+  final bool isHome;
+  final Widget? leading;
+  final String? title;
+  final List<Widget> actions;
 
   @override
   Widget build(BuildContext context) {
@@ -20,47 +28,56 @@ class AppBarWidget extends StatelessWidget with PreferredSizeWidget {
               colors: <Color>[Color(0XFF0F3F54), Color(0XFF267C5D)]),
         ),
       ),
-      leading: Image.asset(kLogo),
-      title: SizedBox(
-        width: double.infinity,
-        child: FractionallySizedBox(
-          widthFactor: .60,
-          alignment: Alignment.centerRight,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              Expanded(
-                child: Card(
-                  color: kWhite,
-                  child: Padding(
-                    padding: const EdgeInsets.all(6.0),
-                    child: Row(
-                      children: [
-                        const Icon(
-                          Icons.location_on_outlined,
-                          size: 15,
-                          color: kBlack,
-                        ),
-                        kWidth5,
-                        Expanded(
-                          child: Text(
-                            'Palazhi, Kozhikode, 673631',
-                            maxLines: 1,
-                            style: TextStyle(fontSize: 14.sp),
-                            overflow: TextOverflow.ellipsis,
+      leading: isHome ? Image.asset(kLogo) : leading,
+      title: isHome
+          ? SizedBox(
+              width: double.infinity,
+              child: FractionallySizedBox(
+                widthFactor: .60,
+                alignment: Alignment.centerRight,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Expanded(
+                      child: Card(
+                        color: kWhite,
+                        child: Padding(
+                          padding: const EdgeInsets.all(6.0),
+                          child: Row(
+                            children: [
+                              const Icon(
+                                Icons.location_on_outlined,
+                                size: 15,
+                                color: kBlack,
+                              ),
+                              kWidth5,
+                              Expanded(
+                                child: Text(
+                                  'Palazhi, Kozhikode, 673631',
+                                  maxLines: 1,
+                                  style: TextStyle(fontSize: 14.sp),
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                              ),
+                            ],
                           ),
                         ),
-                      ],
+                      ),
                     ),
-                  ),
+                  ],
                 ),
               ),
-            ],
-          ),
-        ),
-      ),
-      centerTitle: true,
+            )
+          : title != null
+              ? Text(
+                  title!,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 18.sp),
+                )
+              : null,
+      centerTitle: isHome,
       actions: [
+        ...actions,
         Builder(
           builder: (ctx) {
             return IconButton(
