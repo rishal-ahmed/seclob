@@ -24,13 +24,12 @@ class AppBarWidget extends StatelessWidget with PreferredSizeWidget {
       title: SizedBox(
         width: double.infinity,
         child: FractionallySizedBox(
-          widthFactor: .70,
+          widthFactor: .60,
           alignment: Alignment.centerRight,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               Expanded(
-                flex: 3,
                 child: Card(
                   color: kWhite,
                   child: Padding(
@@ -56,25 +55,26 @@ class AppBarWidget extends StatelessWidget with PreferredSizeWidget {
                   ),
                 ),
               ),
-              Expanded(
-                child: Builder(
-                  builder: (ctx) {
-                    return IconButton(
-                      splashRadius: 0.1,
-                      onPressed: () {
-                        Scaffold.of(ctx).openEndDrawer();
-                      },
-                      icon: Image.asset(kDrawer, color: kWhite, scale: 0.9),
-                      alignment: Alignment.centerRight,
-                    );
-                  },
-                ),
-              ),
             ],
           ),
         ),
       ),
       centerTitle: true,
+      actions: [
+        Builder(
+          builder: (ctx) {
+            return IconButton(
+              splashRadius: 0.1,
+              onPressed: () {
+                Scaffold.of(ctx).openEndDrawer();
+              },
+              icon: Image.asset(kIconDrawer, color: kWhite, scale: 0.9),
+              alignment: Alignment.centerRight,
+            );
+          },
+        ),
+        kWidth10
+      ],
     );
   }
 

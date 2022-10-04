@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:seclob/core/constants/colors.dart';
+import 'package:seclob/core/constants/images.dart';
 import 'package:seclob/presentation/widgets/horizontal_listview_widget.dart';
 
 class HomeMaintananceWidget extends StatelessWidget {
@@ -32,7 +33,7 @@ class HomeMaintananceWidget extends StatelessWidget {
                   ),
                 ),
                 child: Image.asset(
-                  'assets/images/man.png',
+                  kIconMan,
                   fit: BoxFit.cover,
                   height: double.infinity,
                 )),

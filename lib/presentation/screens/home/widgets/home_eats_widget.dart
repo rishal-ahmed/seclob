@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:seclob/core/constants/colors.dart';
+import 'package:seclob/core/constants/images.dart';
 import 'package:seclob/core/constants/sizes.dart';
 import 'package:seclob/presentation/widgets/horizontal_listview_widget.dart';
 
@@ -19,7 +20,7 @@ class HomeEatsWidget extends StatelessWidget {
             alignment: Alignment.center,
             children: [
               Image.asset(
-                'assets/images/man.png',
+                kIconMan,
                 fit: BoxFit.cover,
                 height: double.infinity,
               ),

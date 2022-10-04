@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:seclob/core/constants/colors.dart';
+import 'package:seclob/core/constants/images.dart';
+import 'package:seclob/core/constants/paddings.dart';
 import 'package:seclob/core/constants/sizes.dart';
 
 class HomeVehicleServiceWiget extends StatelessWidget {
@@ -11,7 +13,7 @@ class HomeVehicleServiceWiget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 5.w),
+      padding: kPaddingHome,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -67,7 +69,7 @@ class BoxTileWidget extends StatelessWidget {
         ),
         child: Column(
           children: [
-            Image.asset('assets/images/bike.png'),
+            Image.asset(kIconBike),
             kHeight5,
             FittedBox(
               child: Text(

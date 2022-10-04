@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:seclob/core/constants/colors.dart';
+import 'package:seclob/core/constants/images.dart';
 import 'package:seclob/presentation/widgets/horizontal_listview_widget.dart';
 
 //==================== Most Used Services Card ====================
@@ -13,7 +14,7 @@ class HomeMostUsedServices extends StatelessWidget {
   Widget build(BuildContext context) {
     return HorizontalListviewWidget(
       title: 'HomeMostUsedServices',
-      horizontalPadding: 8.w,
+      horizontalPadding: 6.w,
       item: ClipRRect(
         borderRadius: BorderRadius.circular(10),
         child: Stack(
@@ -29,7 +30,7 @@ class HomeMostUsedServices extends StatelessWidget {
                     child: Column(
                       children: [
                         Image.asset(
-                          'assets/images/electrician.png',
+                          kIconElectrician,
                           fit: BoxFit.cover,
                           height: 16.w,
                         ),

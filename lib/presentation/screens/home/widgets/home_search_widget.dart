@@ -14,7 +14,7 @@ class HomeSearchWidget extends StatelessWidget {
     return Container(
       color: kGrey200,
       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 8.w, vertical: 3.w),
+        padding: EdgeInsets.symmetric(horizontal: 6.w, vertical: 3.w),
         child: TextFeildWidget(
           inputBorder: const OutlineInputBorder(
               borderSide: BorderSide(

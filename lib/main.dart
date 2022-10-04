@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
+import 'package:seclob/core/constants/colors.dart';
 import 'package:seclob/presentation/screens/main/screen_main.dart';
 
 void main() {
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
           title: 'Seclob',
-          theme: ThemeData(primarySwatch: Colors.blue),
+          theme: ThemeData(primaryColor: kColorMain),
           home: const ScreenMain(),
         );
       },

@@ -19,7 +19,7 @@ class CircleTileWidget extends StatelessWidget {
       child: Column(
         children: [
           CircleAvatar(
-            backgroundImage: AssetImage('assets/images/$image'),
+            backgroundImage: AssetImage(image),
             radius: 25,
           ),
           kHeight5,

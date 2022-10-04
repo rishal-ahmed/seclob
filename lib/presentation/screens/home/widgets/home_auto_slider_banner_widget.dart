@@ -1,8 +1,10 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
+import 'package:seclob/core/constants/images.dart';
+import 'package:seclob/core/constants/paddings.dart';
 
-final List _banners = ['banner1.png', 'banner2.png', 'banner3.png'];
+final List _banners = [kIconBanner1, kIconBanner2, kIconBanner3];
 
 class HomeAutoSliderBannerWidget extends StatelessWidget {
   const HomeAutoSliderBannerWidget({
@@ -12,7 +14,7 @@ class HomeAutoSliderBannerWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 5.w),
+      padding: kPaddingHome,
       child: CarouselSlider.builder(
         itemCount: _banners.length,
         itemBuilder: (context, index, realIndex) {
@@ -21,7 +23,7 @@ class HomeAutoSliderBannerWidget extends StatelessWidget {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8.0),
               image: DecorationImage(
-                image: AssetImage('assets/images/${_banners[index]}'),
+                image: AssetImage(_banners[index]),
                 fit: BoxFit.cover,
               ),
             ),
