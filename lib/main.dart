@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
           title: 'Seclob',
-          theme: ThemeData(primaryColor: kColorMain),
+          theme: ThemeData(primaryColor: primaryColor),
           onGenerateRoute: RouteGenerator.generateRoute,
           initialRoute: routeRoot,
         );

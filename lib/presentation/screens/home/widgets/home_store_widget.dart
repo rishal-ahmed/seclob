@@ -30,7 +30,7 @@ class HomeStoreWidget extends StatelessWidget {
                   height: 5.h,
                   width: double.infinity,
                   decoration: const BoxDecoration(
-                      color: kColorMain2,
+                      color: primaryColor2,
                       borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(15),
                         topRight: Radius.circular(15),

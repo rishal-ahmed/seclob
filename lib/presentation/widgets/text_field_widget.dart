@@ -35,10 +35,12 @@ class TextFeildWidget extends StatelessWidget {
     this.onTap,
     this.obscureText,
     this.floatingLabelBehavior,
+    this.color,
   }) : super(key: key);
   final String? labelText;
   final String? hintText;
   final double? fontSize;
+  final Color? color;
   final bool isHint;
   final TextInputType? textInputType;
   final TextCapitalization textCapitalization;
@@ -69,7 +71,9 @@ class TextFeildWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      textAlignVertical: TextAlignVertical.center,
       controller: controller,
+      style: TextStyle(color: color),
       decoration: InputDecoration(
         floatingLabelBehavior: floatingLabelBehavior,
         counterText: couterText,

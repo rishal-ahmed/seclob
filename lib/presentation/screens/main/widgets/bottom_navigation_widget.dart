@@ -56,8 +56,8 @@ class BottomNavigationWidget extends StatelessWidget {
                     bottomNavChangeNotifier.value = selectedIndex;
                   },
                   currentIndex: newIndex,
-                  selectedItemColor: kColorMain,
-                  unselectedItemColor: kColorMain,
+                  selectedItemColor: primaryColor,
+                  unselectedItemColor: primaryColor,
                   type: BottomNavigationBarType.fixed,
                   backgroundColor: kWhite,
                   selectedFontSize: 13.0,

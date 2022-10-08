@@ -53,7 +53,7 @@ class HomeMostUsedServices extends StatelessWidget {
                     width: double.infinity,
                     padding: const EdgeInsets.all(5),
                     decoration: const BoxDecoration(
-                        color: kColorMain2,
+                        color: primaryColor2,
                         borderRadius: BorderRadius.only(
                           bottomLeft: Radius.circular(10),
                           bottomRight: Radius.circular(10),
