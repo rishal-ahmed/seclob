@@ -1,8 +1,8 @@
-//========== Constant Images ==========
 import 'package:seclob/core/constants/endpoints.dart';
 
+//========== Constant Images ==========
 const String kLogo = '${kImageAppendGlobalUri}logo.svg';
-const String kIconDrawer = '${kImageAppendGlobalUri}hamburger.svg';
+const String kIconDrawer = '${kImageAppendGlobalUri}hamburger.png';
 const String kIconSearch = '${kImageAppendGlobalUri}search.svg';
 
 const String kIconBanner1 = '${kImageAppendHomeUri}banner1.png';

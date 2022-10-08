@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:seclob/core/constants/colors.dart';
 import 'package:seclob/core/constants/images.dart';
@@ -24,7 +25,7 @@ class HomeSearchWidget extends StatelessWidget {
           contentPadding: const EdgeInsets.all(8),
           isDense: true,
           hintText: 'Search anything....',
-          prefixIcon: Image.asset(kIconSearch),
+          prefixIcon: SvgPicture.asset(kIconSearch),
           fontSize: 15.sp,
         ),
       ),

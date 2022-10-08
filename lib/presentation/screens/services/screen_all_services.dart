@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:seclob/core/constants/colors.dart';
 import 'package:seclob/core/constants/images.dart';
 import 'package:seclob/core/constants/paddings.dart';
@@ -17,7 +18,8 @@ class ScreenAllServices extends StatelessWidget {
         actions: [
           FractionallySizedBox(
             heightFactor: .4,
-            child: Image.asset(kIconSearch, color: kWhite, fit: BoxFit.cover),
+            child:
+                SvgPicture.asset(kIconSearch, color: kWhite, fit: BoxFit.cover),
           ),
         ],
       ),

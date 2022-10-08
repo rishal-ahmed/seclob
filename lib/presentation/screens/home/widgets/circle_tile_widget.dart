@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:seclob/core/constants/colors.dart';
 import 'package:seclob/core/constants/sizes.dart';
@@ -22,9 +23,13 @@ class CircleTileWidget extends StatelessWidget {
         onTap: onTap,
         child: Column(
           children: [
-            CircleAvatar(
-              backgroundImage: AssetImage(image),
-              radius: 25,
+            ClipRRect(
+              borderRadius: BorderRadius.circular(25),
+              child: CircleAvatar(
+                // backgroundImage: AssetImage(image),
+                radius: 25,
+                child: SvgPicture.asset(image),
+              ),
             ),
             kHeight5,
             FittedBox(

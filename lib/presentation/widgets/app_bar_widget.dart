@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:seclob/core/constants/colors.dart';
 import 'package:seclob/core/constants/images.dart';
@@ -28,7 +29,7 @@ class AppBarWidget extends StatelessWidget with PreferredSizeWidget {
               colors: <Color>[Color(0XFF0F3F54), Color(0XFF267C5D)]),
         ),
       ),
-      leading: isHome ? Image.asset(kLogo) : leading,
+      leading: isHome ? SvgPicture.asset(kLogo) : leading,
       title: isHome
           ? SizedBox(
               width: double.infinity,

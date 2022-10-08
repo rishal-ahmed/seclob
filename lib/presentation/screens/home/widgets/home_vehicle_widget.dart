@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:seclob/core/constants/colors.dart';
 import 'package:seclob/core/constants/images.dart';
@@ -69,7 +70,7 @@ class BoxTileWidget extends StatelessWidget {
         ),
         child: Column(
           children: [
-            Image.asset(kIconBike),
+            SvgPicture.asset(kIconBike),
             kHeight5,
             FittedBox(
               child: Text(
